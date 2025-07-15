@@ -1,9 +1,6 @@
 # System Monitor (Rust) 🖥️📊
 
-A lightweight, cross-platform system monitoring tool written in Rust, providing real-time CPU and memory usage statistics.
-
-![System Monitor Demo](https://via.placeholder.com/800x400?text=CPU+and+Memory+Usage+Monitoring)  
-*(Placeholder for actual screenshot)*
+A lightweight, cross-platform system monitoring tool written in Rust, providing real-time Hardware usage statistics.
 
 ---
 
