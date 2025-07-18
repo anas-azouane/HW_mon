@@ -1,10 +1,10 @@
-# System Monitor (Rust) 🖥️📊
+# System Monitor (Rust)
 
 A lightweight, cross-platform system monitoring tool written in Rust, providing real-time Hardware usage statistics.
 
 ---
 
-## Features ✅
+## Features
 
 - **CPU Monitoring**
   - Global CPU usage (%)
@@ -19,7 +19,7 @@ A lightweight, cross-platform system monitoring tool written in Rust, providing 
 
 ---
 
-## Installation ⚙️
+## Installation
 
 ### Prerequisites
 

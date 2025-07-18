@@ -7,7 +7,7 @@ pub struct MemMon {
 impl MemMon {
     pub fn new() -> Self {
         let mut sys = System::new_all();
-        sys.refresh_memory(); // Initial refresh
+        sys.refresh_memory(); 
         Self { sys }
     }
 
