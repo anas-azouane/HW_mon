@@ -1,6 +1,6 @@
 # System Monitor (Rust)
 
-A lightweight, cross-platform system monitoring tool written in Rust, providing real-time Hardware usage statistics.
+A simple, lightweight, multithreaded system monitoring tool written in Rust. It provides real-time hardware usage statistics, including CPU, memory, and disk monitoring.
 
 ---
 
@@ -12,10 +12,15 @@ A lightweight, cross-platform system monitoring tool written in Rust, providing 
 - **Memory Monitoring**
   - Total, used, free, and available memory (in GB)
   - Memory usage percentage
+- **Disk Monitoring**
+  - Total and available disk space
+  - Disk usage percentage
+- **Multithreaded Architecture**
+  - Each monitoring component runs in its own thread
 - **Simple CLI Output**
   - Refreshes every second
 - **Modular & Extensible**
-  - Separate APIs for CPU and memory monitoring
+  - Separate APIs for CPU, memory, and disk monitoring
 
 ---
 
