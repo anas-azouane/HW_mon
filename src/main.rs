@@ -1,8 +1,10 @@
 mod cpu_mon;
 mod mem_mon;
+mod disk_mon;
 
 use cpu_mon::CpuMon;
 use mem_mon::MemMon;
+use disk_mon::DiskMon;
 use std::thread::{self, JoinHandle};
 use std::time::Duration;
 
@@ -21,6 +23,14 @@ fn main() {
         let mut memory_monitor = MemMon::new();
         loop {
             memory_monitor.mem_results();
+            thread::sleep(Duration::from_secs(1));
+        }
+    }));
+    
+    handles.push(thread::spawn(|| {
+        let mut disk_monitor = DiskMon::new();
+        loop {
+            disk_monitor.disk_results();
             thread::sleep(Duration::from_secs(1));
         }
     }));
