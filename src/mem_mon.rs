@@ -1,4 +1,5 @@
 use sysinfo::System;
+use notify_rust::Notification;
 
 pub struct MemMon {
     sys: System,
@@ -29,11 +30,17 @@ impl MemMon {
 
     pub fn mem_results(&mut self){
         self.refresh();
-        println!("Memory Usage: {:.2}%", self.get_usage());
-        
+        let usage = self.get_usage();
+        println!("Memory Usage: {:.2}%", self.get_usage()); 
         let (used, total, free, available) = self.get_stats_gb();
         println!("  Used: {:.2} GB / Total: {:.2} GB", used, total);
         println!("  Free: {:.2} GB | Available: {:.2} GB", free, available);
+        if usage > 90.0 {
+            Notification::new()
+                .summary("HW_mon: High Memory Usage")
+                .body(&format!("Memory usage is at {:.2}%", usage))
+                .show().unwrap();
+        }
 
     }
 }

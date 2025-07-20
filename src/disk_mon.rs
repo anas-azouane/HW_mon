@@ -1,4 +1,5 @@
 use sysinfo::Disks;
+use notify_rust::Notification;
 
 pub struct DiskMon {
     disks: Disks,
@@ -41,6 +42,13 @@ impl DiskMon {
             "Disk usage:\n  {:.2} GB used, {:.2} GB available, {:.2} GB total",
             used, available, total
         );
+        if available < 2.0 {
+            Notification::new()
+                .summary("HW_mon: Low Disk Space")
+                .body(&format!("Remaining Disk is:{:.2}", available))
+                .show().unwrap();
+        }
+
     }
 }
 
