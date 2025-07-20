@@ -38,7 +38,7 @@ impl DiskMon {
         self.refresh();
         let (used, available, total) = self.get_stats();
         println!(
-            "Disk usage: {:.2} GB used, {:.2} GB available, {:.2} GB total",
+            "Disk usage:\n  {:.2} GB used, {:.2} GB available, {:.2} GB total",
             used, available, total
         );
     }

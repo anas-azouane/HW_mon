@@ -32,9 +32,8 @@ impl MemMon {
         println!("Memory Usage: {:.2}%", self.get_usage());
         
         let (used, total, free, available) = self.get_stats_gb();
-        println!("Used: {:.2} GB / Total: {:.2} GB", used, total);
-        println!("Free: {:.2} GB | Available: {:.2} GB", free, available);
-        println!("---");
+        println!("  Used: {:.2} GB / Total: {:.2} GB", used, total);
+        println!("  Free: {:.2} GB | Available: {:.2} GB", free, available);
 
     }
 }
