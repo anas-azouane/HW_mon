@@ -16,9 +16,9 @@ A simple, lightweight, multithreaded system monitoring tool written in Rust.
   - Total and available disk space
   - Disk usage percentage
 - **Network Traffic Monitoring**  
-  -Inbound and Outbound traffic of each network Interface
+  - Inbound and Outbound traffic of each network Interface
 - **Notification System**  
-  -Notifying the user for critical usage
+  - Notifying the user for critical usage
 - **Multithreaded Architecture**
   - Each monitoring component runs in its own thread
 - **Simple CLI Output**
